@@ -1,6 +1,4 @@
-# Appendix-B---Wastewater-Network-Expansion-Optimisation-in-the-Larnaka-District-Cyprus-
-
-# Wastewater Network Expansion Optimisation in the Larnaka District, Cyprus
+# Appendix B - Wastewater Network Expansion Optimisation in the Larnaka District, Cyprus
 
 This repository contains the computational material developed for the MSc thesis **"Wastewater Network Expansion Optimisation in the Larnaka District, Cyprus"**.
 
@@ -10,7 +8,7 @@ The workflow is intended for planning-level scenario comparison, not for constru
 
 ## Repository Contents
 
-The repository contains four main code files, four corresponding HTML exports, and one additional HTML file summarising the generated network maps.
+The repository contains four main code files and four corresponding HTML exports.
 
 The four main code files are:
 
@@ -28,11 +26,7 @@ The four corresponding HTML exports are:
 
 These HTML files are exported versions of the corresponding code files. They are included to make the computational workflow readable and inspectable directly from the browser, without requiring the notebooks or scripts to be executed.
 
-In addition, the repository includes:
-
-- `Network_Maps.html`
-
-This file provides a combined visual overview of all generated network maps. It is intended as the main file for inspecting the final spatial outputs produced by the modelling workflow.
+The combined `Network_Maps` file is not included in this repository because the generated visualisation files were too large to upload.
 
 ## Important Note on Running the Code
 
@@ -42,7 +36,7 @@ The full workflow depends on several auxiliary datasets and intermediate files t
 
 These files were either provided specifically for the thesis case study or produced through manual processing during the modelling workflow. They may be subject to data-sharing restrictions and are therefore not included in this public repository.
 
-For this reason, the repository should be interpreted primarily as documentation of the computational methodology and implementation logic. The included HTML files, especially `Network_Maps.html`, make the final results inspectable even where the full input-data chain cannot be publicly reproduced.
+For this reason, the repository should be interpreted primarily as documentation of the computational methodology and implementation logic. The included HTML exports allow the code structure, modelling steps, and implementation logic to be inspected even where the full input-data chain cannot be publicly reproduced.
 
 ## Code and HTML Files
 
@@ -60,7 +54,7 @@ The implemented components include:
 - generation of the Rooted Dijkstra reference scenario;
 - generation of the Prim--Steiner reference scenario;
 - estimation of new-pipe length and pipe-only cost;
-- generation of spatial outputs for the non-budgeted networks.
+- generation of scenario outputs for the non-budgeted networks.
 
 The corresponding HTML export is:
 
@@ -101,7 +95,7 @@ The implemented components include:
 - WWTP1/WWTP2 allocation;
 - correction of spatial inconsistencies;
 - removal or adjustment of unrealistic isolated fragments;
-- preparation of corrected final networks for pumping-feasibility screening and final mapping.
+- preparation of corrected final networks for pumping-feasibility screening.
 
 This step should be interpreted as a strategic brownfield allocation. It is not a hydraulically verified reassignment of real wastewater flows.
 
@@ -126,7 +120,7 @@ The implemented components include:
 - comparison with existing pumping-station locations;
 - pumping-station count per scenario;
 - pumping CAPEX estimation;
-- generation of final pumping-related spatial outputs.
+- generation of pumping-related scenario outputs.
 
 The pumping analysis is a feasibility screening only. It does not size pumps, pressure mains, wet wells, or detailed hydraulic profiles.
 
@@ -135,16 +129,6 @@ The corresponding HTML export is:
 - `Cyprus_PunpingStations.html`
 
 This HTML file allows the pumping-feasibility screening workflow to be inspected without running the original code file.
-
-## Network Maps
-
-The repository also includes:
-
-- `Network_Maps.html`
-
-This file provides a combined visual demonstration of the network maps generated during the thesis workflow. It is the most useful file for quickly inspecting the final spatial results.
-
-`Network_Maps.html` is intended to show the overall set of generated network configurations, including the non-budgeted scenarios, the budget-constrained scenarios, and the final corrected network interpretations. It provides a compact visual overview of the spatial outputs without requiring the user to run the full modelling workflow.
 
 ## Main Dependencies
 
@@ -159,3 +143,5 @@ The workflow was developed in Python and relies on geospatial and network-analys
 - NumPy;
 - Folium;
 - Matplotlib.
+
+Additional packages may be required depending on the local environment and the specific version of the code.
