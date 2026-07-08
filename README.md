@@ -15,14 +15,14 @@ The four main code files are:
 - `Cyprus_NonBudgetedNetwork`
 - `Cyprus_BudgetedNetwork`
 - `Cyprus_CorrectedNetwork`
-- `Cyprus_PunpingStations`
+- `Cyprus_PumpingStations`
 
 The four corresponding HTML exports are:
 
 - `Cyprus_NonBudgetedNetwork.html`
 - `Cyprus_BudgetedNetwork.html`
 - `Cyprus_CorrectedNetwork.html`
-- `Cyprus_PunpingStations.html`
+- `Cyprus_PumpingStations.html`
 
 These HTML files are exported versions of the corresponding code files. They are included to make the computational workflow readable and inspectable directly from the browser, without requiring the notebooks or scripts to be executed.
 
@@ -105,9 +105,9 @@ The corresponding HTML export is:
 
 This HTML file allows the correction and reconciliation workflow to be inspected without running the original code file.
 
-### `Cyprus_PunpingStations`
+### `Cyprus_PumpingStations`
 
-The `Cyprus_PunpingStations` file implements the pumping-feasibility screening.
+The `Cyprus_PumpingStations` file implements the pumping-feasibility screening.
 
 This part of the workflow screens the generated and corrected network scenarios using terrain information and planning-level hydraulic assumptions. The goal is to identify locations where gravity conveyance may become unrealistic and where pumping stations may be required.
 
@@ -126,7 +126,7 @@ The pumping analysis is a feasibility screening only. It does not size pumps, pr
 
 The corresponding HTML export is:
 
-- `Cyprus_PunpingStations.html`
+- `Cyprus_PumpingStations.html`
 
 This HTML file allows the pumping-feasibility screening workflow to be inspected without running the original code file.
 
