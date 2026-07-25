@@ -82,7 +82,7 @@ The corresponding HTML export is:
 
 - `Cyprus_BudgetedNetwork.html`
 
-This HTML file allows the budgeted configuration-generation workflow to be inspected without running the original code file.
+This HTML file allows the workflow for generating the budgeted configurations to be inspected without running the original code file.
 
 ### `Cyprus_CorrectedNetwork`
 
