@@ -53,6 +53,7 @@ The implemented components include:
 - construction of the sewer-to-road helper network;
 - generation of the Rooted Dijkstra reference scenario;
 - generation of the Prim--Steiner reference scenario;
+- verification that the generated layouts are acyclic (rooted trees);
 - estimation of new-pipe length and pipe-only cost;
 - generation of scenario outputs for the non-budgeted networks.
 
@@ -72,7 +73,8 @@ The implemented budgeted heuristics include:
 
 - Shared-trunk expansion;
 - Urban-priority expansion;
-- Municipality-targets expansion.
+- Municipality-targets expansion;
+- verification that the generated layouts are acyclic (rooted trees).
 
 The purpose of this part of the workflow is to compare alternative budget-constrained strategies: one that maximises shared-corridor efficiency, one that prioritises dense urban clusters, and one that improves municipal balance across the northern service area.
 
