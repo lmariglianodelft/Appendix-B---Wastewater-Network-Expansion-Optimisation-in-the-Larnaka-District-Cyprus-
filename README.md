@@ -2,9 +2,9 @@
 
 This repository contains the computational material developed for the MSc thesis **"Wastewater Network Expansion Optimisation in the Larnaka District, Cyprus"**.
 
-The thesis develops a spatial graph-based planning approach to compare wastewater network expansion scenarios for the northern part of the Larnaka District, Cyprus. The model supports strategic wastewater infrastructure planning under cost, coverage, existing-infrastructure, and pumping-feasibility constraints.
+The thesis develops a spatial graph-based planning approach to compare wastewater network expansion configurations for the northern part of the Larnaka District, Cyprus. The model supports strategic wastewater infrastructure planning under cost, coverage, existing-infrastructure, and pumping-feasibility constraints.
 
-The workflow is intended for planning-level scenario comparison, not for construction-ready engineering design. It does not determine final pipe diameters, invert levels, pump capacities, pressure-main dimensions, wet-well dimensions, or treatment-plant design. Instead, it provides a transparent computational framework to explore alternative wastewater network layouts and their implications.
+The workflow is intended for planning-level configuration comparison, not for construction-ready engineering design. It does not determine final pipe diameters, invert levels, pump capacities, pressure-main dimensions, wet-well dimensions, or treatment-plant design. Instead, it provides a transparent computational framework to explore alternative wastewater network layouts and their implications.
 
 ## Repository Contents
 
@@ -42,7 +42,7 @@ For this reason, the repository should be interpreted primarily as documentation
 
 ### `Cyprus_NonBudgetedNetwork`
 
-The `Cyprus_NonBudgetedNetwork` file implements the non-budgeted full-coverage reference scenarios.
+The `Cyprus_NonBudgetedNetwork` file implements the non-budgeted full-coverage reference configurations.
 
 This part of the workflow estimates the infrastructure scale required to connect all modelled urban wastewater demand terminals to the proposed northern wastewater treatment endpoint, referred to as WWTP2, without imposing the available budget constraint.
 
@@ -51,11 +51,11 @@ The implemented components include:
 - preparation of the non-budgeted workflow;
 - definition of the WWTP2 root node;
 - construction of the sewer-to-road helper network;
-- generation of the Rooted Dijkstra reference scenario;
-- generation of the Prim--Steiner reference scenario;
+- generation of the Rooted Dijkstra reference configuration;
+- generation of the Prim--Steiner reference configuration;
 - verification that the generated layouts are acyclic (rooted trees);
 - estimation of new-pipe length and pipe-only cost;
-- generation of scenario outputs for the non-budgeted networks.
+- generation of configuration outputs for the non-budgeted networks.
 
 The corresponding HTML export is:
 
@@ -65,7 +65,7 @@ This HTML file allows the non-budgeted workflow to be inspected without opening 
 
 ### `Cyprus_BudgetedNetwork`
 
-The `Cyprus_BudgetedNetwork` file implements the budget-constrained wastewater network expansion scenarios.
+The `Cyprus_BudgetedNetwork` file implements the budget-constrained wastewater network expansion configurations.
 
 This part of the workflow applies a maximum admissible new-pipe length derived from the available sewer-network budget. Instead of connecting all demand immediately, the code explores how different planning priorities affect coverage, cost, and spatial distribution under a fixed investment constraint.
 
@@ -82,7 +82,7 @@ The corresponding HTML export is:
 
 - `Cyprus_BudgetedNetwork.html`
 
-This HTML file allows the budgeted scenario-generation workflow to be inspected without running the original code file.
+This HTML file allows the budgeted configuration-generation workflow to be inspected without running the original code file.
 
 ### `Cyprus_CorrectedNetwork`
 
@@ -111,18 +111,18 @@ This HTML file allows the correction and reconciliation workflow to be inspected
 
 The `Cyprus_PumpingStations` file implements the pumping-feasibility screening.
 
-This part of the workflow screens the generated and corrected network scenarios using terrain information and planning-level hydraulic assumptions. The goal is to identify locations where gravity conveyance may become unrealistic and where pumping stations may be required.
+This part of the workflow screens the generated and corrected network configurations using terrain information and planning-level hydraulic assumptions. The goal is to identify locations where gravity conveyance may become unrealistic and where pumping stations may be required.
 
 The implemented components include:
 
-- loading of corrected network scenarios;
+- loading of corrected network configurations;
 - terrain-based gravity-cover screening;
 - excavation-depth evaluation;
 - identification of mandatory and optional pumping-station candidates;
 - comparison with existing pumping-station locations;
-- pumping-station count per scenario;
+- pumping-station count per configuration;
 - pumping CAPEX estimation;
-- generation of pumping-related scenario outputs.
+- generation of pumping-related configuration outputs.
 
 The pumping analysis is a feasibility screening only. It does not size pumps, pressure mains, wet wells, or detailed hydraulic profiles.
 
